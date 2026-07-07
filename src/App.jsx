@@ -12,6 +12,7 @@ import Testimonials from './components/Testimonials';
 import Booking from './components/Booking';
 import Footer from './components/Footer';
 import Chat from './components/Chat';
+import ChatWidget from './components/ChatWidget';
 import './App.css';
 
 function App() {
@@ -20,49 +21,51 @@ function App() {
   useEffect(() => {
     if (view !== 'landing') return;
 
-    const fadeElements = document.querySelectorAll('.fade-in-up');
-    
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      },
-      {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-      }
-    );
+    const timer = setTimeout(() => {
+      const fadeElements = document.querySelectorAll('.fade-in-up');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add('active');
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -50px 0px' }
+      );
+      fadeElements.forEach((el) => observer.observe(el));
+      return () => observer.disconnect();
+    }, 50);
 
-    fadeElements.forEach((el) => observer.observe(el));
-
-    return () => {
-      observer.disconnect();
-    };
+    return () => clearTimeout(timer);
   }, [view]);
 
   return (
     <>
       <Navbar setView={setView} currentView={view} />
+
       {view === 'landing' ? (
-        <main>
-          <Hero />
-          <About />
-          <Services />
-          <BeforeAfter />
-          <Quiz />
-          <Science />
-          <PreCare />
-          <Blog />
-          <Testimonials />
-          <Booking />
-        </main>
+        <>
+          <main>
+            <Hero />
+            <About />
+            <Services />
+            <BeforeAfter />
+            <Quiz />
+            <Science />
+            <PreCare />
+            <Blog />
+            <Testimonials />
+            <Booking />
+          </main>
+          <Footer />
+          {/* Floating Chat Widget – always visible on landing */}
+          <ChatWidget />
+        </>
       ) : (
-        <Chat />
+        <>
+          <Chat />
+          <Footer />
+        </>
       )}
-      <Footer />
     </>
   );
 }
