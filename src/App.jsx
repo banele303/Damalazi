@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -6,13 +6,20 @@ import Services from './components/Services';
 import BeforeAfter from './components/BeforeAfter';
 import Quiz from './components/Quiz';
 import Science from './components/Science';
+import PreCare from './components/PreCare';
+import Blog from './components/Blog';
 import Testimonials from './components/Testimonials';
 import Booking from './components/Booking';
 import Footer from './components/Footer';
+import Chat from './components/Chat';
 import './App.css';
 
 function App() {
+  const [view, setView] = useState('landing');
+
   useEffect(() => {
+    if (view !== 'landing') return;
+
     const fadeElements = document.querySelectorAll('.fade-in-up');
     
     const observer = new IntersectionObserver(
@@ -34,21 +41,27 @@ function App() {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [view]);
 
   return (
     <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <BeforeAfter />
-        <Quiz />
-        <Science />
-        <Testimonials />
-        <Booking />
-      </main>
+      <Navbar setView={setView} currentView={view} />
+      {view === 'landing' ? (
+        <main>
+          <Hero />
+          <About />
+          <Services />
+          <BeforeAfter />
+          <Quiz />
+          <Science />
+          <PreCare />
+          <Blog />
+          <Testimonials />
+          <Booking />
+        </main>
+      ) : (
+        <Chat />
+      )}
       <Footer />
     </>
   );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Navbar() {
+export default function Navbar({ setView, currentView }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -28,17 +28,71 @@ export default function Navbar() {
   return (
     <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
-        <a href="#" className="logo" onClick={handleLinkClick}>
-          <span class="logo-accent">Derma</span>laz
-        </a>
+        <button 
+          className="logo" 
+          onClick={() => { setView('landing'); handleLinkClick(); }}
+          style={{ cursor: 'pointer', background: 'none', border: 'none', textAlign: 'left' }}
+        >
+          <span className="logo-accent">Derma</span>laz
+        </button>
         
         <nav className={`nav-menu ${isMobileOpen ? 'open' : ''}`}>
-          <a href="#about" className="nav-link" onClick={handleLinkClick}>Philosophy</a>
-          <a href="#services" className="nav-link" onClick={handleLinkClick}>Treatments</a>
-          <a href="#before-after" className="nav-link" onClick={handleLinkClick}>Results</a>
-          <a href="#quiz" className="nav-link" onClick={handleLinkClick}>Skin Quiz</a>
-          <a href="#technology" className="nav-link" onClick={handleLinkClick}>Science</a>
-          <a href="#booking" className="btn btn-primary nav-cta" onClick={handleLinkClick}>Book Consultation</a>
+          {currentView === 'landing' ? (
+            <>
+              <a href="#about" className="nav-link" onClick={handleLinkClick}>Philosophy</a>
+              <a href="#services" className="nav-link" onClick={handleLinkClick}>Treatments</a>
+              <a href="#before-after" className="nav-link" onClick={handleLinkClick}>Results</a>
+              <a href="#precare" className="nav-link" onClick={handleLinkClick}>Guidelines</a>
+              <a href="#blog" className="nav-link" onClick={handleLinkClick}>Journal</a>
+              <button 
+                onClick={() => { setView('chat'); handleLinkClick(); }} 
+                className="nav-link" 
+                style={{ 
+                  cursor: 'pointer', 
+                  background: 'none', 
+                  border: 'none', 
+                  textTransform: 'uppercase', 
+                  fontWeight: 700, 
+                  letterSpacing: '0.05em', 
+                  color: 'var(--color-laser)' 
+                }}
+              >
+                AI Consult
+              </button>
+              <a href="#booking" className="btn btn-primary nav-cta" onClick={handleLinkClick}>Book Consultation</a>
+            </>
+          ) : (
+            <>
+              <button 
+                onClick={() => { setView('landing'); handleLinkClick(); }} 
+                className="nav-link" 
+                style={{ 
+                  cursor: 'pointer', 
+                  background: 'none', 
+                  border: 'none', 
+                  textTransform: 'uppercase', 
+                  fontWeight: 600, 
+                  letterSpacing: '0.05em' 
+                }}
+              >
+                Main Website
+              </button>
+              <button 
+                className="btn btn-primary nav-cta" 
+                onClick={() => { 
+                  setView('landing'); 
+                  handleLinkClick();
+                  setTimeout(() => {
+                    const el = document.getElementById('booking');
+                    el?.scrollIntoView({ behavior: 'smooth' });
+                  }, 150);
+                }}
+                style={{ cursor: 'pointer' }}
+              >
+                Book Consultation
+              </button>
+            </>
+          )}
         </nav>
         
         <button 
