@@ -6,34 +6,45 @@ export default function About() {
       <div className="container">
         <div className="section-header text-center fade-in-up active">
           <span className="badge">Our Philosophy</span>
-          <h2 className="section-title">Clinical Precision. Luxurious Care.</h2>
-          <p class="section-desc">At Dermalaz, we believe skin health is a reflection of overall well-being. Under the convergence of advanced dermatological science and customized medical spa comfort, we create clinical plans that reveal your skin's natural brilliance.</p>
+          <h2 className="section-title">Where Wellness Meets Artistry</h2>
+          <p className="section-desc">At MASA Medical Aesthetic Spa Africa, we believe beauty is deeply personal. Nestled in the lush suburb of Forest Town, Johannesburg, our luxury medical spa combines advanced clinical science with bespoke wellness care to enhance your natural beauty — on your terms.</p>
         </div>
         
         <div className="about-grid">
           <div className="about-card fade-in-up active">
             <div className="about-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m12 6-3 6h6l-3 6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m12 6-3 6h6l-3 6"/></svg>
             </div>
-            <h3>Advanced Laser Tech</h3>
-            <p>We leverage top-tier FDA & Health Canada approved diode lasers and IPL equipment to guarantee safe, permanent, and pain-managed treatments.</p>
+            <h3>Advanced Skincare Science</h3>
+            <p>We harness medical-grade technology and evidence-based protocols to deliver transformative results across all skin tones, with a special expertise in melanin-rich African skin.</p>
           </div>
           
           <div className="about-card fade-in-up active" style={{ transitionDelay: '0.1s' }}>
             <div className="about-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
-            <h3>Personalized Skincare</h3>
-            <p>Every face is unique. We begin with a deep digital skin analysis to craft custom treatment paths matching your Fitzpatrick skin type.</p>
+            <h3>Ethnic Hair Restoration</h3>
+            <p>Pioneers in ethnic hair restoration and transplantation in South Africa. Our specialists understand the unique growth patterns and structure of African, mixed-race, and textured hair types.</p>
           </div>
           
           <div className="about-card fade-in-up active" style={{ transitionDelay: '0.2s' }}>
             <div className="about-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </div>
-            <h3>Clinical Safety First</h3>
-            <p>Rest easy in a sterile, medical-grade environment. Our experienced practitioners maintain the highest standards of safety and efficacy.</p>
+            <h3>Luxury Spa Wellness</h3>
+            <p>Every visit to our Forest Town sanctuary is a holistic experience — from personalised treatment plans crafted by our practitioners to the serene ambiance designed to restore mind and body.</p>
           </div>
+        </div>
+
+        <div className="about-location-card fade-in-up active">
+          <div className="about-location-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p className="about-location-label">Visit Us</p>
+            <p className="about-location-address">1 Torwood Road, Forest Town, Randburg 2193, Johannesburg</p>
+          </div>
+          <a href="#booking" className="btn btn-secondary" style={{ marginLeft: 'auto', flexShrink: 0 }}>Get Directions</a>
         </div>
       </div>
     </section>

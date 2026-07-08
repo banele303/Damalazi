@@ -7,12 +7,28 @@ export default function Hero() {
       <div className="hero-overlay"></div>
       <div className="container hero-container">
         <div className="hero-content fade-in-up active">
-          <span className="badge">Advanced Medical Aesthetics</span>
-          <h1 className="hero-title">Where Science Meets <span className="text-glow">Radiant Beauty</span></h1>
-          <p className="hero-subtitle">Experience Ottawa's premier destination for laser hair removal, facial rejuvenation, and medical-grade skincare treatments tailored to your unique skin profile.</p>
+          <span className="badge">Luxury Medical Spa · Forest Town, Johannesburg</span>
+          <h1 className="hero-title">Enhancing Your <span className="text-glow">Natural Beauty</span></h1>
+          <p className="hero-subtitle">
+            MASA Medical Aesthetic Spa Africa — Johannesburg's premier destination for advanced skincare, wellness, ethnic hair restoration & transplants, and medical-grade aesthetic treatments tailored to your unique skin.
+          </p>
           <div className="hero-ctas">
-            <a href="#booking" className="btn btn-primary">Schedule Consultation</a>
+            <a href="#booking" className="btn btn-primary">Book a Consultation</a>
             <a href="#services" className="btn btn-secondary">Explore Treatments</a>
+          </div>
+          <div className="hero-stats">
+            <div className="hero-stat">
+              <span className="hero-stat-num">4,689</span>
+              <span className="hero-stat-label">Followers</span>
+            </div>
+            <div className="hero-stat">
+              <span className="hero-stat-num">215+</span>
+              <span className="hero-stat-label">Treatments Shared</span>
+            </div>
+            <div className="hero-stat">
+              <span className="hero-stat-num">5★</span>
+              <span className="hero-stat-label">Client Rating</span>
+            </div>
           </div>
         </div>
       </div>

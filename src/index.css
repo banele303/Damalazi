@@ -2871,3 +2871,121 @@ button, input, select, textarea {
     right: 20px;
   }
 }
+
+/* ==========================================================================
+   MASA REBRAND — NEW COMPONENT STYLES
+   ========================================================================== */
+
+.hero-stats {
+  display: flex;
+  gap: 36px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-stat-num {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-gold-base);
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.about-location-card {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 28px;
+  background: rgba(197,168,128,0.04);
+  border: 1px solid var(--color-border-glow);
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+
+.about-location-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(197,168,128,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-base);
+  flex-shrink: 0;
+}
+
+.about-location-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  margin: 0 0 2px;
+}
+
+.about-location-address {
+  font-size: 0.95rem;
+  color: var(--color-text-pri);
+  font-weight: 500;
+  margin: 0;
+}
+
+.footer-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 10px 0 16px;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.footer-address svg {
+  color: var(--color-gold-base);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer-contact {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-contact p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.footer-contact a {
+  color: var(--color-text-sec);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-contact a:hover { color: var(--color-gold-base); }
+
+@media (max-width: 480px) {
+  .hero-stats { gap: 20px; }
+  .hero-stat-num { font-size: 1.5rem; }
+  .about-location-card { flex-direction: column; align-items: flex-start; }
+  .about-location-card .btn { width: 100%; text-align: center; margin-left: 0 !important; }
+}

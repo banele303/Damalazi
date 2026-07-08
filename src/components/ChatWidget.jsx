@@ -4,15 +4,17 @@ import { useChat } from '@ai-sdk/react';
 /* ─── Local streaming fetch (mirrors Chat.jsx handler) ──────────────────── */
 const buildResponse = (messages) => {
   const last = messages[messages.length - 1]?.content?.toLowerCase() || '';
-  if (last.match(/hair|laser|follicle/)) return 'Our **Diode Laser Hair Removal** starts from $89/session. Shave 24h before, avoid sun for 14 days. 6–8 sessions for permanent results. Want to book a free consultation?';
-  if (last.match(/filler|lip|volume|dermalax|inject/)) return '**Dermalax HA Fillers** start from $399/syringe. Results last 6–12 months. A medical assessment with Dr. Hajjaj is required before treatment.';
-  if (last.match(/ipl|photo|spot|pigment|redness/)) return '**IPL Photo Facial** targets sunspots and rosacea. From $149/session. Zero downtime — return to daily activities immediately!';
-  if (last.match(/tight|sag|collagen|wrinkle/)) return '**Skin Tightening** uses thermal energy to stimulate collagen from $199/session. Results improve over 3–6 months.';
-  if (last.match(/peel|acne|scar|pore/)) return '**Chemical Peels** resurface skin and target acne scarring from $99/session. Light peeling for 2–5 days post-treatment.';
-  if (last.match(/hour|location|address|where|open/)) return '📍 425 McArthur Ave, Ottawa, ON\n⏰ Mon–Sat: 9AM–7PM\n📞 +1 (613) 555-0182';
-  if (last.match(/price|cost|how much/)) return 'Laser Hair: from $89 · IPL Facial: from $149 · Skin Tightening: from $199 · Peels: from $99 · Fillers: from $399/syringe.';
-  if (last.match(/hello|hi|hey|help/)) return 'Hi! I\'m DermaBot 👋 Ask me about our laser treatments, dermal fillers, pricing, or how to prepare for a procedure!';
-  return 'I can help with laser hair removal, IPL facials, skin tightening, chemical peels, or Dermalax fillers. What would you like to know?';
+  if (last.match(/transplant|fue|fut|hair loss|balding|alopecia/)) return '**Ethnic Hair Transplants** at MASA are our flagship service. We specialise in African, mixed-race & textured hair follicle structures. FUE & FUT techniques available. Consultation required — ask us to book your free assessment!';
+  if (last.match(/hair restoration|prp|scalp|thinning|regrowth/)) return '**Hair Restoration options** at MASA include PRP therapy (from R3,500), scalp micro-pigmentation (from R2,800), and laser hair growth therapy (from R1,200/session).';
+  if (last.match(/hair|laser hair|shave|follicle/)) return '**Diode Laser Hair Removal** is calibrated for darker skin tones at MASA. From R850/session. Shave 24h before, avoid sun for 14 days. 6–8 sessions for permanent results. Want to book a free consultation?';
+  if (last.match(/filler|lip|volume|hyaluronic|inject/)) return '**Dermal HA Fillers** at MASA start from R3,800/syringe. Premium brands (Juvederm, Restylane). Results last 6–18 months. A prior medical assessment is required at our Forest Town clinic.';
+  if (last.match(/ipl|photo|pigment|dark spot|hyperpigment|pih|redness/)) return '**IPL Photo Facial** targets PIH and dark spots — very common in darker skin tones. From R1,400/session. Zero downtime. Spots clear within 5–7 days!';
+  if (last.match(/tight|sag|collagen|wrinkle|body/)) return '**Skin Tightening & Body Contouring** uses RF thermal energy to stimulate collagen. From R1,800/session. Results improve over 3–6 months.';
+  if (last.match(/peel|acne|scar|pore|texture|chemical/)) return '**Medical Chemical Peels** treat PIH & acne scarring — our most requested service for darker complexions. From R950/session. Light peeling for 2–5 days post-treatment.';
+  if (last.match(/hour|location|address|where|open|forest town|johannesburg/)) return '📍 1 Torwood Road, Forest Town, Randburg 2193, Johannesburg\n⏰ Mon–Sat: 9AM–7PM\n📞 +27 11 234 1234\n📸 @masaaesthetics';
+  if (last.match(/price|cost|how much|rand/)) return 'Laser Hair: from R850 · IPL Facial: from R1,400 · Skin Tightening: from R1,800 · Peels: from R950 · Fillers: from R3,800/syringe · PRP Hair: from R3,500.';
+  if (last.match(/hello|hi|hey|help/)) return 'Hi! I\'m MasaBot 👋 Ask me about our ethnic hair restoration & transplants, laser treatments, skincare, pricing, or our Forest Town clinic in Johannesburg!';
+  return 'I can help with ethnic hair transplants, laser hair removal, IPL facials, skin tightening, chemical peels, or dermal fillers. What would you like to know?';
 };
 
 const localFetch = async (url, options) => {
@@ -50,7 +52,7 @@ export default function ChatWidget() {
     initialMessages: [{
       id: 'w-init',
       role: 'assistant',
-      content: 'Hi! I\'m DermaBot 👋 Ask me anything about our laser treatments, dermal fillers, or clinic information!'
+      content: 'Hi! I\'m MasaBot 👋 I\'m your MASA wellness assistant. Ask me about our ethnic hair restoration & transplants, advanced laser treatments, skincare, or our luxury Forest Town spa in Johannesburg!'
     }],
     fetch: localFetch,
     onFinish: () => {
@@ -67,7 +69,7 @@ export default function ChatWidget() {
 
   const handleOpen = () => setOpen(true);
 
-  const quickReplies = ['Hair removal prep', 'Filler pricing', 'Clinic hours'];
+  const quickReplies = ['Hair transplants', 'IPL & dark spots', 'Clinic location'];
 
   return (
     <>
@@ -95,10 +97,10 @@ export default function ChatWidget() {
                 <span className="widget-online"></span>
               </div>
               <div>
-                <div className="widget-name">DermaBot <span className="widget-ai-badge">AI</span></div>
+                <div className="widget-name">MasaBot <span className="widget-ai-badge">AI</span></div>
                 <div className="widget-status">
                   <span className="widget-status-dot"></span>
-                  {isLoading ? 'Thinking...' : 'Online · Dermalaz Clinic'}
+                  {isLoading ? 'Thinking...' : 'Online · MASA Forest Town'}
                 </div>
               </div>
             </div>

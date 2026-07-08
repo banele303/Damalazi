@@ -33,7 +33,8 @@ export default function Navbar({ setView, currentView }) {
           onClick={() => { setView('landing'); handleLinkClick(); }}
           style={{ cursor: 'pointer', background: 'none', border: 'none', textAlign: 'left' }}
         >
-          <span className="logo-accent">Derma</span>laz
+          <span className="logo-accent">MASA</span>
+          <span style={{ fontSize: '0.65em', display: 'block', letterSpacing: '0.15em', fontWeight: 400, opacity: 0.7, lineHeight: 1 }}>MEDICAL AESTHETIC SPA</span>
         </button>
         
         <nav className={`nav-menu ${isMobileOpen ? 'open' : ''}`}>

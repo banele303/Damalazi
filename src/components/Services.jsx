@@ -6,58 +6,75 @@ export default function Services() {
       id: 'laser-hair',
       category: 'Hair Reduction',
       title: 'Diode Laser Hair Removal',
-      description: 'Get silky smooth skin with our high-speed diode laser. Features advanced contact cooling for near-painless hair removal across all skin types.',
+      description: 'Get silky smooth skin with our high-speed diode laser. Specifically calibrated for melanin-rich and darker skin tones with advanced contact cooling for near-painless, permanent results.',
       image: '/images/treatment_laser.png',
-      benefits: ['Permanent hair reduction', 'Comfortable cooling tip', 'Safe for dark and tanned skin'],
-      price: 'From $89 / session'
+      benefits: ['Safe for all skin tones incl. darker skin', 'Permanent hair reduction in 6–8 sessions', 'Comfortable cooling tip technology'],
+      price: 'From R850 / session'
     },
     {
       id: 'facial',
-      category: 'Rejuvenation',
-      title: 'IPL Laser Photo Facials',
-      description: 'Reverse sun damage, target hyperpigmentation, and banish redness. This photorejuvenation facial stimulates collagen for a radiant complexion.',
+      category: 'Skin Rejuvenation',
+      title: 'IPL Photo Facial & Glow Treatment',
+      description: 'Reverse sun damage, target hyperpigmentation, and banish uneven skin tone. Our photorejuvenation facial stimulates collagen and evens out pigmentation concerns common in African skin.',
       image: '/images/treatment_facial.png',
-      benefits: ['Minimizes dark spots & freckles', 'Reduces active redness & rosacea', 'Boosts natural collagen output'],
-      price: 'From $149 / session'
+      benefits: ['Targets dark spots & hyperpigmentation', 'Reduces redness and uneven skin tone', 'Boosts natural collagen production'],
+      price: 'From R1,400 / session'
+    },
+    {
+      id: 'hair-restoration',
+      category: 'Ethnic Hair Restoration',
+      title: 'Hair Transplant & Restoration',
+      description: 'Pioneers in African ethnic hair transplantation. Our specialists understand curly, coily, and textured hair follicle structures, delivering natural-looking, permanent restoration results.',
+      image: '/images/treatment_tightening.png',
+      benefits: ['Specialist in ethnic & textured hair types', 'FUE & FUT techniques available', 'Scalp health & wellness programmes'],
+      price: 'Consultation required'
     },
     {
       id: 'tightening',
       category: 'Anti-Aging',
-      title: 'Skin Tightening & Contour',
-      description: 'Stimulate deep thermal layers to tighten loose skin on the face, neck, and body. Combats sagging, wrinkles, and fine lines non-invasively.',
-      image: '/images/treatment_tightening.png',
-      benefits: ['Instant firming, long-term tightening', 'No surgery or downtime', 'Smoothes fine lines and wrinkles'],
-      price: 'From $199 / session'
-    },
-    {
-      id: 'peels',
-      category: 'Skincare Clinic',
-      title: 'Chemical Peels & Peeling',
-      description: 'Exfoliate dull, outer layers of skin to reveal fresh skin beneath. Exceptional for targeting acne scarring, large pores, and texture concerns.',
+      title: 'Skin Tightening & Body Contouring',
+      description: 'Stimulate deep thermal layers to tighten loose skin on the face, neck, and body. Non-invasive neocollagenesis to combat sagging and restore youthful firmness.',
       placeholderClass: 'gradient-peel',
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" className="placeholder-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="placeholder-svg">
           <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" />
         </svg>
       ),
-      benefits: ['Refines texture and pore size', 'Promotes rapid cellular turnover', 'Brightens dull skin instantly'],
-      price: 'From $99 / session'
+      benefits: ['Instant firming, long-term tightening', 'Zero surgery or downtime', 'Face, neck, jaw & body areas'],
+      price: 'From R1,800 / session'
     },
     {
-      id: 'fillers',
-      category: 'Cosmetic Injections',
-      title: 'Dermal Fillers (Dermalax HA)',
-      description: 'Restore youthful volume, contour cheekbones, and plump lips. Utilizing medical-grade South Korean Hyaluronic Acid (HA) Dermalax fillers for soft, natural results.',
+      id: 'peels',
+      category: 'Advanced Skincare',
+      title: 'Medical Chemical Peels',
+      description: 'Exfoliate dull outer layers to reveal fresh, luminous skin. Exceptional for targeting acne scarring, PIH (post-inflammatory hyperpigmentation), large pores, and texture concerns.',
       placeholderClass: 'gradient-filler',
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" className="placeholder-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="placeholder-svg">
           <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
           <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
           <line x1="12" y1="22.08" x2="12" y2="12" />
         </svg>
       ),
-      benefits: ['Enhances facial contours & lips', 'Deeply hydrating HA formula', 'Safe, immediate, and reversible'],
-      price: 'From $399 / syringe'
+      benefits: ['Treats PIH & acne scarring', 'Brightens & evens skin tone', 'Stimulates rapid cellular renewal'],
+      price: 'From R950 / session'
+    },
+    {
+      id: 'fillers',
+      category: 'Aesthetic Injectables',
+      title: 'Dermal Fillers & Volume Restoration',
+      description: 'Restore youthful volume, contour cheekbones, and plump lips using premium Hyaluronic Acid fillers. Naturally enhancing facial harmony and structure for soft, beautiful results.',
+      placeholderClass: 'gradient-peel',
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="placeholder-svg">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+          <line x1="9" y1="9" x2="9.01" y2="9" />
+          <line x1="15" y1="9" x2="15.01" y2="9" />
+        </svg>
+      ),
+      benefits: ['Enhances facial contours & lips', 'Premium HA formula, natural results', 'Safe, immediate & reversible'],
+      price: 'From R3,800 / syringe'
     }
   ];
 
@@ -65,9 +82,9 @@ export default function Services() {
     <section className="services-section section-padding" id="services">
       <div className="container">
         <div className="section-header text-center fade-in-up active">
-          <span className="badge">Clinical Treatments</span>
-          <h2 className="section-title">Aesthetic Solutions Designed for You</h2>
-          <p className="section-desc">From permanent laser hair reduction to non-invasive facial contours, our advanced treatments target skin concerns directly at their source.</p>
+          <span className="badge">Our Treatments</span>
+          <h2 className="section-title">Signature MASA Treatments</h2>
+          <p className="section-desc">From ethnic hair restoration to advanced laser skin treatments, every MASA procedure is designed to honour and enhance the unique beauty of African skin and beyond.</p>
         </div>
 
         <div className="services-grid">
