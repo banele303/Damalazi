@@ -1,116 +1,58 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 
 export default function BeforeAfter() {
-  const [sliderPosition, setSliderPosition] = useState(50); // percentage (0 - 100)
-  const [isDragging, setIsDragging] = useState(false);
-  const containerRef = useRef(null);
-
-  const handleMove = (clientX) => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = clientX - rect.left;
-    const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
-    setSliderPosition(percentage);
-  };
-
-  const handleMouseDown = (e) => {
-    e.preventDefault();
-    setIsDragging(true);
-  };
-
-  const handleTouchStart = (e) => {
-    setIsDragging(true);
-  };
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (!isDragging) return;
-      handleMove(e.clientX);
-    };
-
-    const handleTouchMove = (e) => {
-      if (!isDragging) return;
-      if (e.touches && e.touches[0]) {
-        handleMove(e.touches[0].clientX);
-      }
-    };
-
-    const handleMouseUp = () => {
-      setIsDragging(false);
-    };
-
-    if (isDragging) {
-      window.addEventListener('mousemove', handleMouseMove);
-      window.addEventListener('mouseup', handleMouseUp);
-      window.addEventListener('touchmove', handleTouchMove);
-      window.addEventListener('touchend', handleMouseUp);
-    }
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-      window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchend', handleMouseUp);
-    };
-  }, [isDragging]);
-
   return (
     <section className="slider-section section-padding" id="before-after">
       <div className="container">
+        
         <div className="section-header text-center fade-in-up active">
-          <span className="badge">Visual Results</span>
-          <h2 className="section-title">See the Dermalaz Transformation</h2>
-          <p className="section-desc">Drag the interactive slider left and right to inspect the skin rejuvenation progress after 3 sessions of IPL photo facial treatment.</p>
+          <span className="badge">Transformations</span>
+          <h2 className="section-title">Decking & Pool Renewals</h2>
+          <p className="section-desc">We take worn-out, weathered outdoor decks and renovate them into stunning, low-maintenance entertainment spaces built to last.</p>
         </div>
 
-        <div className="slider-wrapper fade-in-up active">
-          <div 
-            className="comparison-slider" 
-            ref={containerRef}
-            style={{ position: 'relative' }}
-          >
-            {/* Before Image */}
-            <img 
-              src="/images/before_skin.png" 
-              alt="Skin texture before laser rejuvenation" 
-              className="image-before" 
-            />
-            
-            {/* After Image Container (clipped) */}
-            <div 
-              className="image-after-container" 
-              style={{ width: `${sliderPosition}%` }}
-            >
+        <div className="transformation-showcase fade-in-up active" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '30px', alignItems: 'center' }}>
+          
+          {/* Side-by-side Split Image Showcase */}
+          <div style={{ position: 'relative', background: 'var(--color-bg-card)', borderRadius: '12px', border: '1px solid var(--color-border)', padding: '12px', boxShadow: '0 12px 40px rgba(0,0,0,0.3)' }}>
+            <div style={{ position: 'relative', borderRadius: '8px', overflow: 'hidden' }}>
               <img 
-                src="/images/after_skin.png" 
-                alt="Skin texture after laser rejuvenation" 
-                className="image-after"
-                style={{ width: containerRef.current ? `${containerRef.current.offsetWidth}px` : '800px' }}
+                src="/images/before_after_deck.png" 
+                alt="Before and After Deck Renovation" 
+                style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '550px', objectFit: 'cover' }} 
               />
-            </div>
-            
-            {/* Drag bar */}
-            <div 
-              className="slider-handle" 
-              style={{ left: `${sliderPosition}%` }}
-              onMouseDown={handleMouseDown}
-              onTouchStart={handleTouchStart}
-            >
-              <div className="handle-line"></div>
-              <div className="handle-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="8 18 2 12 8 6" />
-                  <polyline points="16 6 22 12 16 18" />
-                </svg>
+              {/* Custom Label Overlays */}
+              <div style={{ position: 'absolute', top: '20px', left: '20px', padding: '6px 14px', background: 'rgba(239, 68, 68, 0.85)', borderRadius: '4px', color: '#fff', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                Before: Weathered Timber
               </div>
-              <div className="handle-line"></div>
+              <div style={{ position: 'absolute', top: '20px', right: '20px', padding: '6px 14px', background: 'rgba(34, 197, 94, 0.85)', borderRadius: '4px', color: '#fff', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                After: Premium Installation
+              </div>
+              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'linear-gradient(to top, rgba(10,13,18,0.9), transparent)', padding: '24px 20px 20px 20px' }}>
+                <p style={{ margin: 0, color: 'var(--color-text-pri)', fontSize: '1rem', fontWeight: 600 }}>Kyalami Deck Restoration Project</p>
+                <p style={{ margin: '4px 0 0 0', color: 'var(--color-text-sec)', fontSize: '0.85rem' }}>Renovated Rusted Subframe + Installed Premium Eco-Friendly Composite Boards</p>
+              </div>
             </div>
-
-            {/* Labels */}
-            <span className="slider-label label-before">Before Treatment</span>
-            <span className="slider-label label-after">After Rejuvenation</span>
           </div>
+
+          {/* Transformation highlights */}
+          <div className="transformation-details" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginTop: '16px' }}>
+            <div style={{ padding: '24px', background: 'var(--color-bg-card)', borderRadius: '8px', border: '1px solid var(--color-border)' }}>
+              <h4 style={{ color: 'var(--color-gold-base)', fontSize: '1.15rem', marginBottom: '8px' }}>1. Subframe Reinforcement</h4>
+              <p style={{ color: 'var(--color-text-sec)', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>We inspect and replace rotting wooden joists, installing structural steel beams or double-treated structural pine framework to guarantee stability.</p>
+            </div>
+            <div style={{ padding: '24px', background: 'var(--color-bg-card)', borderRadius: '8px', border: '1px solid var(--color-border)' }}>
+              <h4 style={{ color: 'var(--color-gold-base)', fontSize: '1.15rem', marginBottom: '8px' }}>2. Hidden Fastening Clips</h4>
+              <p style={{ color: 'var(--color-text-sec)', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>No exposed nails or screws to snag feet. We use durable stainless steel hidden clips that sit between the boards, ensuring a seamless luxury finish.</p>
+            </div>
+            <div style={{ padding: '24px', background: 'var(--color-bg-card)', borderRadius: '8px', border: '1px solid var(--color-border)' }}>
+              <h4 style={{ color: 'var(--color-gold-base)', fontSize: '1.15rem', marginBottom: '8px' }}>3. Zero Maintenance Boarding</h4>
+              <p style={{ color: 'var(--color-text-sec)', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>With premium composite boards, there is no need to scrub, sand, seal, or oil. Just an occasional wash with soapy water keeps your deck looking brand new.</p>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
   );

@@ -3,90 +3,89 @@ import React, { useState } from 'react';
 const articles = [
   {
     id: 1,
-    title: 'Selective Photothermolysis: Why 808nm is the Diode Laser Hair Removal Standard',
-    excerpt: 'Explore the exact quantum mechanics behind modern hair removal. Learn how melanin absorption curves make 808nm the safest and most effective wavelength.',
-    image: '/images/blog_diode.png',
-    date: 'July 5, 2026',
-    author: 'Dr. Fadi Hajjaj, MD',
+    title: 'Composite vs. Timber Decking: Choosing for the South African Climate',
+    excerpt: 'Explore how harsh South African weather affects decking materials. Learn why composite is overtaking traditional hardwoods like Balau and Garapa in modern construction.',
+    image: '/images/composite_boards.png',
+    date: 'July 8, 2026',
+    author: 'Magalela Construction Team',
     readTime: '6 min read',
     content: (
       <>
-        <p>In the clinical domain of medical aesthetics, laser hair reduction has transitioned from an experimental process to a highly optimized science. At the center of this transition lies the principle of <strong>Selective Photothermolysis</strong>, defined by Anderson and Parrish in 1983. This principle states that a specific wavelength of light can selectively target a chromophore (in this case, melanin in the hair follicle) and destroy it thermally without damaging surrounding skin tissue.</p>
+        <p>Deciding between composite and timber decking is one of the most critical decisions when planning your outdoor space. In South Africa, our weather conditions are unique: high UV exposure in Gauteng, severe winter rainfall and coastal humidity in Cape Town, and intense heat in Durban. These climates place extreme stress on outdoor timber structures.</p>
         
         <div className="blog-callout">
-          <h5>Wavelength Precision</h5>
-          <p>The 808nm diode wavelength is uniquely positioned. It balance high absorption in melanin with deep dermal penetration, ensuring thermal energy reaches the bulb and bulge of the follicle.</p>
+          <h5>UV & Moisture Performance</h5>
+          <p>Traditional timbers like Balau and Garapa require sealing at least twice a year in high-UV areas. Without maintenance, they fade to a dull grey and split. Premium composite decking (like Eva-Last) is engineered to resist fading and moisture completely.</p>
         </div>
 
-        <h4>Melanin Absorption vs. Skin Safety</h4>
-        <p>The Fitzpatrick skin scale ranges from Type I (very fair) to Type VI (highly pigmented). Shorter wavelengths (like the 755nm Alexandrite) are highly absorbed by melanin. While excellent for fair skin, this absorption represents a burn risk for darker skin tones because the epidermal melanin absorbs too much energy. Conversely, longer wavelengths (like the 1064nm Nd:YAG) penetrate deeply but have low melanin absorption, requiring higher fluences which increases discomfort.</p>
+        <h4>Evaluating Natural Timber Decks</h4>
+        <p>Hardwoods like Garapa and Balau are stunning. They offer an organic feel and deep color that composite cannot fully replicate. However, timber absorbs moisture, leading to expanding, warping, and cracking if not oiled regularly. Treated Pine is budget-friendly but is a softwood, making it susceptible to denting, wood rot, and termite infestation if not pressure-treated correctly.</p>
         
-        <p>The 808nm diode wavelength strikes the optimal therapeutic balance. It is deep enough to reach deep-seated follicles while maintaining a safety margin for epidermal heating, especially when paired with active sapphire contact cooling.</p>
+        <p>Composite decking, made from recycled wood fibers and plastic polymers, is wrapped in a protective cap. It never requires sanding, oiling, or painting. It is highly resistant to rot, mold, scratching, and fading, backed by warranties up to 25 years.</p>
 
-        <h4>Pre-Treatment and Safety Standards</h4>
-        <p>To ensure maximum clinical efficacy, patients must adhere to strict guidelines:</p>
+        <h4>Comparison Summary</h4>
         <ul>
-          <li><strong>No Plucking or Waxing:</strong> The target follicle must remain intact. Only shaving is permitted.</li>
-          <li><strong>Sun Avoidance:</strong> Active tans increase epidermal melanin concentrations, elevating risk. Avoid direct exposure for 14 days pre-treatment.</li>
+          <li><strong>Initial Cost:</strong> Pine is cheapest, followed by Garapa and Balau. Composite has the highest initial cost.</li>
+          <li><strong>Maintenance Cost:</strong> Composite is virtually R0. Wood decks require sanding, oil and sealants, costing thousands every year.</li>
+          <li><strong>Lifespan:</strong> Composite decks outlast softwoods by double, maintaining their color and structural integrity for decades.</li>
         </ul>
       </>
     )
   },
   {
     id: 2,
-    title: 'Deep Hydro-Volume: Inside Dermalax Hyaluronic Acid Fillers',
-    excerpt: 'Understanding the biochemical cross-linking of South Korean Monophasic Dermalax. How BDDE cross-linking extends product longevity.',
-    image: '/images/blog_fillers.png',
-    date: 'June 28, 2026',
-    author: 'Elena Rostova, Aesthetics Specialist',
+    title: 'SANS 10082 Compliance: Building Regulations for Raised Decks in South Africa',
+    excerpt: 'Before building an elevated deck, understand South Africa\'s safety codes. A guide to foundations, handrails, and engineers sign-offs.',
+    image: '/images/navigation_layout.png',
+    date: 'June 29, 2026',
+    author: 'Structural Engineering Board',
     readTime: '5 min read',
     content: (
       <>
-        <p>Dermal fillers have revolutionized non-surgical facial contouring, with Hyaluronic Acid (HA) being the global material of choice. Among premium brands, <strong>Dermalax</strong> stands out due to its monophasic gel structure and specialized chemical cross-linking. Unlike biphasic fillers, which contain a mixture of cross-linked particles suspended in non-cross-linked HA, Dermalax consists of a homogeneous monophasic gel, allowing for smooth extrusion and highly natural-looking volume restoration.</p>
+        <p>Any deck elevated more than 300mm above ground level is classified as a raised structure. In South Africa, raised decks must comply with <strong>SANS 10400 (Part M and Part T)</strong> building standards to ensure structural safety. Failure to comply can result in local council fines or structure collapse.</p>
         
         <div className="blog-callout">
-          <h5>The Cross-Linking Process</h5>
-          <p>Standard HA is degraded by the body\'s natural hyaluronidase enzymes within days. By using BDDE (1,4-butanediol diglycidyl ether) cross-linking, Dermalax forms a stable, three-dimensional matrix that resists enzymatic breakdown, providing results that endure for 6 to 12 months.</p>
+          <h5>Structural Safety Limits</h5>
+          <p>Any deck higher than 1.5 meters from ground level requires structural engineering plans and an engineer\'s sign-off. Safety handrails must be at least 1 meter high, and balustrade gaps cannot exceed 100mm.</p>
         </div>
 
-        <h4>Safety, Hydration, and Rheology</h4>
-        <p>Hyaluronic acid is a naturally occurring glycosaminoglycan capable of binding up to 1,000 times its weight in water. When injected into the dermis or subcutaneous space, it immediately pulls in hydration, filling volume gaps. Dermalax is purified to remove residual BDDE, reducing allergic responses and inflammatory swelling post-procedure.</p>
+        <h4>Core SANS Guidelines for Decking Subframes</h4>
+        <p>Proper deck construction starts from the ground up. Foundations must consist of concrete footings (typically 300x300mm and 600mm deep) to anchor structural posts. Timber posts must be treated to H4 or H5 classification for in-ground contact, preventing subterranean rot and wood-boring insects.</p>
+        
+        <p>Structural timber used for joists and bearers must be S5 graded structural pine or hardwood, sized and spaced according to load-bearing spans. For pool environments, joists should have a joist-tape seal to prevent water pooling between the deck boards and joists.</p>
 
-        <p>Depending on facial anatomy, different Dermalax formulations are used:</p>
+        <h4>Why Compliance Matters</h4>
         <ul>
-          <li><strong>Dermalax Plus:</strong> Low viscosity, ideal for superficial lines, tear troughs, and lip hydration.</li>
-          <li><strong>Dermalax Deep Plus:</strong> Medium viscosity, optimized for nasolabial folds, cheekbones, and lip volume.</li>
-          <li><strong>Dermalax Implant Plus:</strong> High viscosity, injected supra-periosteally for structural chin and jawline definition.</li>
+          <li><strong>Council Approval:</strong> Submitting municipal plans prevents delays when selling your home.</li>
+          <li><strong>Safety:</strong> Structural collapse of elevated decks can cause severe injuries.</li>
+          <li><strong>Insurance:</strong> Homeowners insurance policies will reject claims if a deck was built without SANS compliance.</li>
         </ul>
       </>
     )
   },
   {
     id: 3,
-    title: 'Reversing Photoaging: How IPL Photo Facials Target Melanin and Redness',
-    excerpt: 'Uncover how broadband light energy selectively collapses hyperpigmented spots and micro-capillaries to correct rosacea and sun damage.',
-    image: '/images/blog_ipl.png',
-    date: 'June 15, 2026',
-    author: 'Dr. Fadi Hajjaj, MD',
-    readTime: '8 min read',
+    title: 'The Timber Deck Maintenance Guide: Protecting Balau & Garapa Wood',
+    excerpt: 'Keep your natural hardwood deck looking rich and premium. Learn the correct sanding, oiling, and cleaning techniques.',
+    image: '/images/timber_decking.png',
+    date: 'June 14, 2026',
+    author: 'Magalela Carpentry Workshop',
+    readTime: '4 min read',
     content: (
       <>
-        <p>Photoaging—manifested as sunspots, age spots, mottled pigmentation, and visible capillaries—is the direct result of chronic ultraviolet radiation. While traditional laser resurfacing peels away layers of skin to trigger healing, <strong>Intense Pulsed Light (IPL)</strong> targets pigment under the skin surface without damaging the epidermis, offering a zero-downtime rejuvenative alternative.</p>
+        <p>Natural hardwood decking is a premium investment. Wood types like Garapa, Balau, and Teak have natural oils that repel insects, but they are still vulnerable to UV graying and surface cracking. By following a consistent maintenance schedule, you can extend your hardwood deck\'s lifespan to 30+ years.</p>
         
         <div className="blog-callout">
-          <h5>Dual Chromophore Targeting</h5>
-          <p>IPL utilizes a broad spectrum of light (typically 500nm to 1200nm). Filter cut-offs selectively direct energy into both oxyhemoglobin (for red vascular lesions) and melanin (for brown pigmented spots).</p>
+          <h5>Oiling vs. Varnishing</h5>
+          <p>Never apply standard varnish or polyurethane sealers to an outdoor deck. They crack, peel, and trap moisture. Always use penetrating timber oils (like Woodoc or Cutek) which soak into the grain and allow the timber to breathe.</p>
         </div>
 
-        <h4>The Pigment Rejuvenation Process</h4>
-        <p>When broadband light hits a pigmented lesion, the melanin absorbs the thermal energy rapidly. This heat collapses the pigment cells. Over the next 3 to 7 days, the darkened spots migrate to the skin surface, resembling "coffee grounds," before naturally flaking off. Concurrently, when IPL targets visible capillaries, the energy heats the blood inside the vessel, collapsing the vein walls. The body then naturally reabsorbs the micro-vessels, fading rosacea and redness.</p>
-
-        <h4>Post-Treatment Care Guidelines</h4>
-        <p>Because the skin is sensitive to UV rays post-IPL, compliance with post-treatment protocols is essential:</p>
-        <ul>
-          <li><strong>Broad Spectrum SPF:</strong> Apply SPF 50+ hourly. Melanin cells are highly reactive post-treatment and UV exposure can trigger hyperpigmentation.</li>
-          <li><strong>Gentle Skincare:</strong> Avoid retinoids, chemical exfoliants, and active serums for 5 days. Stick to a simple ceramide moisturizer.</li>
-        </ul>
+        <h4>Three Steps to Deck Restoration</h4>
+        <p><strong>1. Deep Cleaning:</strong> Use a specialized wood cleaner (containing oxalic acid) to wash away dirt, algae, and grey wood fibers. Apply with a stiff-bristled brush, let it sit for 15 minutes, then pressure-wash gently (do not damage the wood fibers).</p>
+        
+        <p><strong>2. Sanding:</strong> Once the deck is completely dry, sand the surface with 80-grit sandpaper. This opens up the wood pores to absorb oil and smooths out any splinters.</p>
+        
+        <p><strong>3. Sealing:</strong> Apply two coats of a high-quality penetrating timber oil with UV blockers. Let the first coat absorb fully before applying the second coat. Maintain this routine once or twice a year depending on sun exposure.</p>
       </>
     )
   }
@@ -102,58 +101,136 @@ export default function Blog() {
 
   const closeArticle = () => {
     setActiveArticle(null);
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = 'unset';
   };
 
   return (
-    <section className="blog-section section-padding" id="blog">
+    <section className="blog-section section-padding" id="blog" style={{ background: 'var(--color-bg-deep)' }}>
       <div className="container">
+        
         <div className="section-header text-center fade-in-up active">
-          <span className="badge">Skincare Intelligence</span>
-          <h2 className="section-title">The Dermalaz Journal</h2>
-          <p className="section-desc">Delve into the science of medical aesthetics. Our clinical articles explain the physics and safety behind our laser and filler procedures.</p>
+          <span className="badge">Expert Guides</span>
+          <h2 className="section-title">Outdoor Construction Journal</h2>
+          <p className="section-desc">Get professional advice, material comparisons, and regulatory guidelines from our expert decking and pool building teams in South Africa.</p>
         </div>
 
-        <div className="services-grid">
-          {articles.map((art) => (
-            <div key={art.id} className="service-card fade-in-up active">
-              <div className="service-img-wrapper" style={{ height: '200px' }}>
-                <img src={art.image} alt={art.title} className="service-img" />
-                <div className="service-img-overlay"></div>
+        <div className="blog-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '30px' }}>
+          {articles.map((art, idx) => (
+            <article 
+              key={art.id} 
+              className="blog-card fade-in-up active"
+              style={{ 
+                transitionDelay: `${idx * 0.05}s`, 
+                background: 'var(--color-bg-card)', 
+                borderRadius: '12px', 
+                overflow: 'hidden', 
+                border: '1px solid var(--color-border)',
+                display: 'flex',
+                flexDirection: 'column'
+              }}
+            >
+              <div style={{ padding: '12px 12px 0 12px', height: '232px', overflow: 'hidden' }}>
+                <img 
+                  src={art.image} 
+                  alt={art.title} 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} 
+                />
               </div>
-              <div className="service-content" style={{ padding: '24px' }}>
-                <span className="service-category">{art.readTime}</span>
-                <h3 style={{ fontSize: '1.25rem', marginBottom: '12px', lineHeight: '1.4' }}>{art.title}</h3>
-                <p style={{ fontSize: '0.85rem', marginBottom: '20px' }}>{art.excerpt}</p>
-                <div className="service-footer" style={{ borderTop: '1px solid var(--color-border)', paddingTop: '16px', marginTop: 'auto' }}>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>By {art.author}</span>
-                  <button onClick={() => openArticle(art)} className="btn-text" style={{ cursor: 'pointer', fontSize: '0.85rem' }}>Read Article →</button>
+              <div style={{ padding: '24px', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: 'var(--color-text-muted)', marginBottom: '12px' }}>
+                  <span>{art.date}</span>
+                  <span>{art.readTime}</span>
+                </div>
+                <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '12px', lineHeight: 1.4 }}>{art.title}</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-sec)', lineHeight: 1.5, marginBottom: '20px', flexGrow: 1 }}>{art.excerpt}</p>
+                
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto', borderTop: '1px solid var(--color-border)', paddingTop: '16px' }}>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--color-gold-base)' }}>By {art.author}</span>
+                  <button 
+                    onClick={() => openArticle(art)} 
+                    className="btn-text" 
+                    style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
+                  >
+                    Read Guide →
+                  </button>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* Article Reader Modal */}
+        {activeArticle && (
+          <div 
+            style={{ 
+              position: 'fixed', 
+              inset: 0, 
+              background: 'rgba(5, 7, 10, 0.9)', 
+              backdropFilter: 'blur(10px)', 
+              zIndex: 9999, 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              padding: '20px' 
+            }}
+            onClick={closeArticle}
+          >
+            <div 
+              style={{ 
+                background: 'var(--color-bg-deep)', 
+                maxWidth: '750px', 
+                width: '100%', 
+                maxHeight: '90vh',
+                overflowY: 'auto',
+                borderRadius: '16px', 
+                border: '1px solid var(--color-border)',
+                boxShadow: '0 20px 50px rgba(0,0,0,0.6)'
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div style={{ padding: '12px 12px 0 12px', position: 'relative' }}>
+                <img 
+                  src={activeArticle.image} 
+                  alt={activeArticle.title} 
+                  style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block', borderRadius: '10px' }} 
+                />
+                <button 
+                  onClick={closeArticle}
+                  style={{ 
+                    position: 'absolute', 
+                    top: '20px', 
+                    right: '20px', 
+                    width: '36px', 
+                    height: '36px', 
+                    borderRadius: '50%', 
+                    background: 'rgba(10,13,18,0.7)', 
+                    color: '#fff', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    cursor: 'pointer',
+                    border: '1px solid var(--color-border)'
+                  }}
+                >
+                  ✕
+                </button>
+              </div>
+              <div style={{ padding: '32px' }} className="blog-modal-content">
+                <div style={{ display: 'flex', gap: '16px', fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '12px' }}>
+                  <span>Published {activeArticle.date}</span>
+                  <span>•</span>
+                  <span>{activeArticle.readTime}</span>
+                </div>
+                <h2 style={{ fontSize: '2rem', color: '#fff', marginBottom: '24px', lineHeight: 1.3 }}>{activeArticle.title}</h2>
+                <div style={{ color: 'var(--color-text-sec)', lineHeight: 1.7, fontSize: '1rem' }} className="article-body">
+                  {activeArticle.content}
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Article Modal */}
-      {activeArticle && (
-        <div className="blog-modal-overlay" onClick={closeArticle}>
-          <div className="blog-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close-btn" onClick={closeArticle} aria-label="Close modal">×</button>
-            <div className="modal-banner" style={{ backgroundImage: `url(${activeArticle.image})` }}>
-              <div className="modal-banner-overlay"></div>
-              <div className="modal-banner-content">
-                <span className="badge" style={{ marginBottom: '12px' }}>{activeArticle.readTime}</span>
-                <h2>{activeArticle.title}</h2>
-                <p>Published on {activeArticle.date} • Written by {activeArticle.author}</p>
-              </div>
-            </div>
-            <div className="modal-body-content">
-              {activeArticle.content}
-            </div>
           </div>
-        </div>
-      )}
+        )}
+
+      </div>
     </section>
   );
 }

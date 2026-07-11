@@ -1,50 +1,49 @@
 import React from 'react';
 
-export default function About() {
+export default function About({ setView }) {
   return (
-    <section className="about-section section-padding" id="about">
+    <section className="section-padding" id="about">
       <div className="container">
         <div className="section-header text-center fade-in-up active">
-          <span className="badge">Our Philosophy</span>
-          <h2 className="section-title">Where Wellness Meets Artistry</h2>
-          <p className="section-desc">At MASA Medical Aesthetic Spa Africa, we believe beauty is deeply personal. Nestled in the lush suburb of Forest Town, Johannesburg, our luxury medical spa combines advanced clinical science with bespoke wellness care to enhance your natural beauty — on your terms.</p>
+          <span className="badge">Who We Are</span>
+          <h2 className="section-title">Design-Led Outdoor Development</h2>
+          <p className="section-desc">
+            Magalela Trading & Projects is a premier construction firm based in Midrand. We design and construct premium outdoor environments that seamlessly integrate swimming pools, timber framing, composite decking, and compliant layouts.
+          </p>
         </div>
         
-        <div className="about-grid">
-          <div className="about-card fade-in-up active">
-            <div className="about-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m12 6-3 6h6l-3 6"/></svg>
+        <div className="bento-grid">
+          <div className="bento-card col-span-4 fade-in-up active">
+            <div className="bento-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /><path d="M2 12h20" /></svg>
             </div>
-            <h3>Advanced Skincare Science</h3>
-            <p>We harness medical-grade technology and evidence-based protocols to deliver transformative results across all skin tones, with a special expertise in melanin-rich African skin.</p>
+            <h3 className="bento-title">Swimming Pools</h3>
+            <p style={{ color: 'var(--text-secondary)' }}>We craft high-performance marbelite and fibreglass swimming pools, handling excavation, reinforced concrete shells, plumbing, coping stone surrounds, and advanced filtration setups.</p>
           </div>
           
-          <div className="about-card fade-in-up active" style={{ transitionDelay: '0.1s' }}>
-            <div className="about-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div className="bento-card col-span-4 fade-in-up active" style={{ transitionDelay: '0.1s' }}>
+            <div className="bento-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="9" y1="3" x2="9" y2="21" /><line x1="15" y1="3" x2="15" y2="21" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="3" y1="15" x2="21" y2="15" /></svg>
             </div>
-            <h3>Ethnic Hair Restoration</h3>
-            <p>Pioneers in ethnic hair restoration and transplantation in South Africa. Our specialists understand the unique growth patterns and structure of African, mixed-race, and textured hair types.</p>
+            <h3 className="bento-title">Composite Decking</h3>
+            <p style={{ color: 'var(--text-secondary)' }}>Our carpenters are specialists in building custom outdoor timber decking (Balau, Garapa) and eco-friendly maintenance-free composite decking with hidden clip fasteners.</p>
           </div>
           
-          <div className="about-card fade-in-up active" style={{ transitionDelay: '0.2s' }}>
-            <div className="about-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <div className="bento-card col-span-4 fade-in-up active" style={{ transitionDelay: '0.2s' }}>
+            <div className="bento-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
             </div>
-            <h3>Luxury Spa Wellness</h3>
-            <p>Every visit to our Forest Town sanctuary is a holistic experience — from personalised treatment plans crafted by our practitioners to the serene ambiance designed to restore mind and body.</p>
+            <h3 className="bento-title">Structural Construction</h3>
+            <p style={{ color: 'var(--text-secondary)' }}>As an NHBRC-registered general builder, we handle home additions, structural brickwork, luxury pergolas, and roof extensions, supported by compliant architectural designs.</p>
           </div>
-        </div>
 
-        <div className="about-location-card fade-in-up active">
-          <div className="about-location-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div className="bento-card col-span-12 fade-in-up active" style={{ transitionDelay: '0.3s', display: 'flex', flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: '24px' }}>
+            <div style={{ flexGrow: 1 }}>
+              <p style={{ color: 'var(--accent-primary)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.1em' }}>Our Head Office</p>
+              <p style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginTop: '8px' }}>Block G, 3rd Floor, Hertford Office Park, 90 Bekker Rd, Vorna Valley, Midrand, 1686</p>
+            </div>
+            <button onClick={() => setView('contact')} className="btn btn-secondary">Get in Touch</button>
           </div>
-          <div>
-            <p className="about-location-label">Visit Us</p>
-            <p className="about-location-address">1 Torwood Road, Forest Town, Randburg 2193, Johannesburg</p>
-          </div>
-          <a href="#booking" className="btn btn-secondary" style={{ marginLeft: 'auto', flexShrink: 0 }}>Get Directions</a>
         </div>
       </div>
     </section>
