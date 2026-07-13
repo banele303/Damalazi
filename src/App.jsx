@@ -21,12 +21,19 @@ function App() {
   const [serviceId, setServiceId] = useState('composite-decking');
   const [quoteData, setQuoteData] = useState(null);
 
-  // Auto route matching for /invoice or #/invoice path triggers
+  // Auto route matching for /invoice, /estimator, /estimate triggers
   useEffect(() => {
     const path = window.location.pathname.toLowerCase();
     const hash = window.location.hash.toLowerCase();
     if (path.includes('invoice') || hash.includes('invoice')) {
       setView('visualizer');
+    } else if (
+      path.includes('estimator') || hash.includes('estimator') ||
+      path.includes('estimater') || hash.includes('estimater') ||
+      path.includes('estimate') || hash.includes('estimate') ||
+      path.includes('calculator') || hash.includes('calculator')
+    ) {
+      setView('calculator');
     }
   }, []);
 
