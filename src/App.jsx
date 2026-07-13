@@ -21,7 +21,7 @@ function App() {
   const [serviceId, setServiceId] = useState('composite-decking');
   const [quoteData, setQuoteData] = useState(null);
 
-  // Auto route matching for /invoice, /estimator, /estimate triggers
+  // Auto route matching for /invoice, /estimator, /estimate, /projects triggers
   useEffect(() => {
     const path = window.location.pathname.toLowerCase();
     const hash = window.location.hash.toLowerCase();
@@ -34,6 +34,8 @@ function App() {
       path.includes('calculator') || hash.includes('calculator')
     ) {
       setView('calculator');
+    } else if (path.includes('projects') || hash.includes('projects')) {
+      setView('projects');
     }
   }, []);
 
@@ -83,7 +85,7 @@ function App() {
           </>
         );
       case 'projects':
-        return <Portfolio />;
+        return <Portfolio setView={setView} setQuoteData={setQuoteData} />;
       case 'service-detail':
         return <ServicePage serviceId={serviceId} setView={setView} />;
       case 'calculator':
