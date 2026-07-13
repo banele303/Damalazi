@@ -17,7 +17,7 @@ import ChatWidget from './components/ChatWidget';
 import './App.css';
 
 function App() {
-  const [view, setView] = useState('visualizer');
+  const [view, setView] = useState('landing');
   const [serviceId, setServiceId] = useState('composite-decking');
   const [quoteData, setQuoteData] = useState(null);
 
