@@ -624,7 +624,7 @@ export default function ServicePage({ serviceId, setView }) {
       {/* 10. Final Call to Action Section */}
       <section className="section-padding" style={{ borderTop: '1px solid var(--border-glass)' }}>
         <div className="container text-center">
-          <div style={{ background: 'linear-gradient(135deg, var(--bg-glass), rgba(255,94,0,0.15))', border: '1px solid var(--accent-primary)', padding: '80px 20px', borderRadius: 'var(--radius-lg)', boxShadow: '0 30px 60px rgba(255,94,0,0.2)', backdropFilter: 'var(--glass-blur)' }}>
+          <div style={{ background: 'linear-gradient(135deg, var(--bg-glass), rgba(0,102,255,0.15))', border: '1px solid var(--accent-primary)', padding: '80px 20px', borderRadius: 'var(--radius-lg)', boxShadow: '0 30px 60px rgba(0,102,255,0.2)', backdropFilter: 'var(--glass-blur)' }}>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '20px', fontWeight: 800, fontFamily: 'var(--font-heading)' }}>Ready to Build Your Outdoor Oasis?</h2>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px', fontSize: '1.1rem', lineHeight: 1.7 }}>Contact our Midrand estimation office today. We will set up a site inspection and provide a fully engineered architectural proposal.</p>
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
